@@ -220,7 +220,7 @@ class WKMeans():
         #######################################################################
         # Firstly perform classical k-means, weighting the distances.
         #######################################################################
-        for index, x in tqdm(enumerate(self.X)):
+        for index, x in enumerate(self.X):
                 # For each data point x, find the minimum weighted distance to
                 # cluster i from point x.
             bestmukey = min([(i[0],
