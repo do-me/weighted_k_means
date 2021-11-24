@@ -12,3 +12,9 @@ Please refer to the preprint for details:
   
 ## Authors
 Created by Olivia Guest (code) and Bradley C. Love (algorithm).
+
+---
+
+## Changes to original repo:
+
+* Added tqdm progress monitor (Jupyter-compatible)
