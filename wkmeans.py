@@ -59,6 +59,7 @@ class WKMeans():
         """
         def wrapped(*args, **kwargs):
             wrapped.calls += 1
+            pbar.update(1)
             return f(*args, **kwargs)
         wrapped.calls = 0
         return wrapped
@@ -67,6 +68,9 @@ class WKMeans():
                  max_runs=200, label='My Clustering', verbose=True, mu=None,
                  max_diff=0.001):
         """Initialisation."""
+        global pbar # tqdm progess bar
+        pbar = tqdm(total=max_runs)
+      
         self.K = K
         if X is None:
             if N == 0:
